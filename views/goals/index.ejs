@@ -6,13 +6,13 @@
     <title>To-do</title>
 </head>
 <body>
-    <h1>Here Are Your Todos for Today:</h1>
+    <h1>Here Are Your Goals for Today:</h1>
     <ul>
-      <% todos.forEach(function(todo) { %>
+      <% goals.forEach(function(goal) { %>
         <li>
-          <%= todo.text %>
+          <%= goal.text %>
             - 
-          <%= todo.done ? 'Done' : 'Not done' %>
+          <%= goal.done ? 'Done' : 'Not done' %>
         </li>
       <% }); %>
     </ul>

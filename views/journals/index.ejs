@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-do</title>
+    <title>Journals</title>
 </head>
 <body>
-    <h1>Here Are Your Todos for Today:</h1>
+    <h1>Here are your journal entries:</h1>
     <ul>
-      <% todos.forEach(function(todo) { %>
+      <% journals.forEach(function(journal) { %>
         <li>
-          <%= todo.text %>
+          <%= journal.text %>
             - 
-          <%= todo.done ? 'Done' : 'Not done' %>
+          <%= journal.date %>
         </li>
       <% }); %>
     </ul>

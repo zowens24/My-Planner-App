@@ -6,13 +6,12 @@
     <title>To-do</title>
 </head>
 <body>
-    <h1>Here Are Your Todos for Today:</h1>
+    <h1>Here Are Your self-reflections:</h1>
     <ul>
-      <% todos.forEach(function(todo) { %>
+      <% reflections.forEach(function(reflection) { %>
         <li>
-          <%= todo.text %>
-            - 
-          <%= todo.done ? 'Done' : 'Not done' %>
+          <%= reflection.text %>
+            
         </li>
       <% }); %>
     </ul>
