@@ -11,10 +11,10 @@ function newTodo(req, res) {
 }
 
 function create(req, res) {
-    
     // req.body === {text:'mow the lawn'}
-    req.body.done = false;
+    //req.body.done = false;
     // req.body === {text:'mow the lawn', done: false}
+    
     Todo.create(req.body);
     res.redirect('/todos');
 }

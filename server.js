@@ -10,6 +10,10 @@ const port = process.env.PORT || 3000;
 // create express app
 const app = express();
 
+// connect to the DB
+require('./config/database');
+
+
 // configure app(app.set)
 app.set('view engine', 'ejs');
 
