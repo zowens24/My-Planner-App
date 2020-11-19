@@ -1,5 +1,6 @@
 module.exports = {
-    getAll
+    getAll,
+    create
    };
    
    const reflections = [
@@ -10,4 +11,8 @@ module.exports = {
    
    function getAll() {
     return reflections;
+   }
+
+   function create(reflection) {
+       reflections.push(reflection);
    }

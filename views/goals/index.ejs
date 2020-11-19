@@ -6,6 +6,9 @@
     <title>To-do</title>
 </head>
 <body>
+    <nav>
+        <a href="/">Home</a>
+    </nav>
     <h1>Here Are Your Goals for Today:</h1>
     <ul>
       <% goals.forEach(function(goal) { %>
@@ -16,5 +19,6 @@
         </li>
       <% }); %>
     </ul>
+    <a href="/goals/new">Add Goal</a>
 </body>
 </html>

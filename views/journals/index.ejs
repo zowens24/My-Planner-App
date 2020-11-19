@@ -6,6 +6,9 @@
     <title>Journals</title>
 </head>
 <body>
+    <nav>
+        <a href="/">Home</a>
+    </nav>
     <h1>Here are your journal entries:</h1>
     <ul>
       <% journals.forEach(function(journal) { %>
@@ -16,5 +19,6 @@
         </li>
       <% }); %>
     </ul>
+    <a href="/journals/new">Add Journal Entry</a>
 </body>
 </html>

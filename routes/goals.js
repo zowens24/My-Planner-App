@@ -1,10 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const Goal = require('../models/goal');
-router.get('/', function(req, res) {
-    res.render('goals/index', {
-        goals: Goal.getAll()
-    });
-})
+const goalsCtrl = require('../controllers/goals');
+
+router.get('/', goalsCtrl.index);
+router.get('/new', goalsCtrl.new);
+router.post('/', goalsCtrl.create);
 
 module.exports = router;

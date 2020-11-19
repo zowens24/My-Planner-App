@@ -1,5 +1,6 @@
 module.exports = {
-    getAll
+    getAll,
+    create
    };
    
    const goals = [
@@ -10,4 +11,8 @@ module.exports = {
    
    function getAll() {
     return goals;
+   }
+
+   function create(goal) {
+       goals.push(goal);
    }
