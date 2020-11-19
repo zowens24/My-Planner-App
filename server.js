@@ -5,6 +5,7 @@ const todosRouter = require('./routes/todos');
 const goalsRouter = require('./routes/goals');
 const journalsRouter = require('./routes/journals');
 const reflectionsRouter = require('./routes/reflections');
+const morgan = require('morgan');
 // create express app
 const app = express();
 
@@ -12,7 +13,9 @@ const app = express();
 app.set('view engine', 'ejs');
 
 // mount middleware(app.use)
-
+app.use(morgan('dev'));
+app.use(express.static('public'));
+app.use(express.urlencoded({extended: false}));
 // mount routes
 app.use('/', indexRouter);
 app.use('/todos', todosRouter);

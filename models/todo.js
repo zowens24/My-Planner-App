@@ -1,5 +1,6 @@
 module.exports = {
-    getAll
+    getAll,
+    create
    };
    
    const todos = [
@@ -10,4 +11,8 @@ module.exports = {
    
    function getAll() {
     return todos;
+   }
+   
+   function create(todo) {
+       todos.push(todo);
    }
