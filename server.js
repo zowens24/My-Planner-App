@@ -6,10 +6,11 @@ const goalsRouter = require('./routes/goals');
 const journalsRouter = require('./routes/journals');
 const reflectionsRouter = require('./routes/reflections');
 const morgan = require('morgan');
+const methodOverride = require('method-override');
 const port = process.env.PORT || 3000;
 // create express app
 const app = express();
-
+require('dotenv').config()
 // connect to the DB
 require('./config/database');
 
@@ -20,6 +21,7 @@ app.set('view engine', 'ejs');
 // mount middleware(app.use)
 app.use(morgan('dev'));
 app.use(express.static('public'));
+app.use(methodOverride('_method'));
 app.use(express.urlencoded({extended: false}));
 // mount routes
 app.use('/', indexRouter);

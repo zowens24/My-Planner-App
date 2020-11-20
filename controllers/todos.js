@@ -1,9 +1,11 @@
 const Todo = require('../models/todo');
 
 function index(req, res) {
-    res.render('todos/index', {
-        todos: Todo.getAll()
-    });
+    Todo.find({}, function(err, todos) {
+        res.render('todos/index', {
+            todos
+        });
+    })
 }
 
 function newTodo(req, res) {
@@ -14,9 +16,10 @@ function create(req, res) {
     // req.body === {text:'mow the lawn'}
     //req.body.done = false;
     // req.body === {text:'mow the lawn', done: false}
+    Todo.create(req.body, function(err, todo) {
+        res.redirect('/todos')
+    })
     
-    Todo.create(req.body);
-    res.redirect('/todos');
 }
 module.exports = {
     index,

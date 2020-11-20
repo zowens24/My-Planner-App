@@ -3,10 +3,9 @@ const mongoose = require('mongoose');
 // set up a shortcut variable
 const db = mongoose.connection;
 
-const connectionURI = 'mongodb+srv://zowens:12345@cluster0.hyes7.mongodb.net/Project-2?retryWrites=true&w=majority'
 
 // connect to mongoDB
-mongoose.connect(connectionURI, {
+mongoose.connect('mongodb+srv://zowens24:12345@cluster0.hyes7.mongodb.net/Project-2?retryWrites=true&w=majority', {
     useCreateIndex: true,
     useNewUrlParser: true,
     useUnifiedTopology: true
