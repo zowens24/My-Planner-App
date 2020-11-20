@@ -10,8 +10,12 @@ Second dev project! This is a daily planner for more than just everyday tasks. I
 - Mongoose
 - MongoDB
 
-### Deploy here: 
+## Wireframe
+https://zoowens382936.invisionapp.com/freehand/Project-2-SONWJ7UeH
+
+### Deploy here: https://my-planner-application.herokuapp.com/
 
 ### Future:
-- Update CSS 
-- Add mongoose to other sections for full CRUD
+- Add CSS 
+- Add mongoose to other sections
+
