@@ -5,7 +5,7 @@ const db = mongoose.connection;
 
 
 // connect to mongoDB
-mongoose.connect('mongodb+srv://zowens24:12345@cluster0.hyes7.mongodb.net/Project-2?retryWrites=true&w=majority', {
+mongoose.connect(process.env.DATABASE_URI, {
     useCreateIndex: true,
     useNewUrlParser: true,
     useUnifiedTopology: true
