@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>To-do</title>
 </head>
 <body>
@@ -16,6 +17,10 @@
           <%= todo.todo %>
             - 
           <%= todo.time%>
+          <form action="/todos/<%= todo._id %>?_method=DELETE" class="delete-form" method="POST">
+            <button type="submit">X</button>
+          </form>
+          <a href="/todos/<%= todo._id %>/edit">Edit</a>
         </li>
       <% }); %>
     </ul>

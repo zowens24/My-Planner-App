@@ -10,21 +10,3 @@ const todoSchema = new Schema({
 // export the result of compiling the schema with mongoose.Model
 module.exports = mongoose.model('Todo', todoSchema);
 
-// module.exports = {
-//     getAll,
-//     create
-//    };
-   
-//    const todos = [
-//     {text: 'Feed Dogs', done: true},
-//     {text: 'Learn Express', done: false},
-//     {text: 'Buy Milk', done: false}
-//    ];
-   
-//    function getAll() {
-//     return todos;
-//    }
-   
-//    function create(todo) {
-//        todos.push(todo);
-//    }
