@@ -4,6 +4,7 @@ function index(req, res) {
     Todo.find({}, function (err, todos) {
         res.render('todos/index', {
             todos
+
         });
     })
 }
